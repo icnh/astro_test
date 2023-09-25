@@ -1,0 +1,16 @@
+---
+import { getEntry, getEntries } from 'astro:content';
+
+const blogPost = await getEntry('blog', 'article-1');
+const { Content } = await blogPost.render();
+---
+
+<html lang="en">
+	<head>
+		<meta charset="utf-8" />
+    <title>{blogPost.data.title}</title>
+  </head>
+  <body>
+    <Content />
+  </body>
+</html>
