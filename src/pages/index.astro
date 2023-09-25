@@ -1,5 +1,6 @@
 ---
 import "../styles/global.css";
+import Link from "../components/Link.astro";
 
 import { getCollection } from "astro:content";
 const allPosts = await getCollection("blog");
@@ -16,7 +17,7 @@ const allPosts = await getCollection("blog");
 	<body>
 		<h1>Hallo Welt!</h1>
 
-		<a href="/about">About us</a>
+		<Link to="/about">About us</Link>
 
 		{
 			allPosts
@@ -27,7 +28,7 @@ const allPosts = await getCollection("blog");
 				.map((post) => (
 					<article>
 						<h2>
-							<a href={"/blog/" + post.slug}>{post.data.title}</a>
+							<Link to={"/blog/" + post.slug}>{post.data.title}</Link>
 						</h2>
 						<p>{post.data.author}</p>
 					</article>

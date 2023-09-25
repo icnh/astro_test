@@ -1,5 +1,6 @@
 ---
 title: 2023
+layout: ../layouts/BaseLayout.astro
 ---
 
 # About Page
