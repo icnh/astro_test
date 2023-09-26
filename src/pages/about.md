@@ -1,9 +1,10 @@
 ---
-title: 2023
+title: About us
 layout: ../layouts/BaseLayout.astro
+year: 2023
 ---
 
-# About Page
+# The About Page
 
 lorem ipsum
 
@@ -13,7 +14,7 @@ void main() {
 }
 ```
 
-## Subtitle {year}
+## Subtitle {frontmatter.year}
 
 lorem ipsum dolor sit amet
 

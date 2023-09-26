@@ -27,10 +27,10 @@ const allPosts = await getCollection("blog");
 				)
 				.map((post) => (
 					<article>
-						<h2>
-							<Link to={"/blog/" + post.slug}>{post.data.title}</Link>
+						<h2 style="margin-bottom: 0">
+							<Link to={`/blog/${post.slug}`}>{post.data.title}</Link>
 						</h2>
-						<p>{post.data.author}</p>
+						<p style="margin-top: 0">{post.data.author}</p>
 					</article>
 				))
 		}
